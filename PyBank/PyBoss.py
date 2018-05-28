@@ -44,7 +44,7 @@ print("Greatest Increase in Revenue: " + Greatest_Inc_Date + " ($" + str(Greates
 print("Greatest Decrease in Revenue: " + Greatest_Decrease_date + "")
 
 # creating a new file for our results
-new_PyBank = open("output.txt", "w")
+new_PyBank = open("output2.txt", "w")
 
 # writing results
 

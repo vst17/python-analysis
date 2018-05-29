@@ -1,11 +1,11 @@
-# we are importing the OS module
+# we are importing the OS module, csv, sys
 import os
 import csv
 import sys
 
 # os.path to create a path to connect to the csv files
 
-PyBank_Data = os.path.join('..','PyBank', 'budget_data_1.csv') 
+PyBank_Data = os.path.join('Resources', 'budget_data_1.csv') 
 # variables to track 
 Total_Months = 0
 Total_Revenue = 0.0
@@ -44,7 +44,7 @@ print("Greatest Increase in Revenue: " + Greatest_Inc_Date + " ($" + str(Greates
 print("Greatest Decrease in Revenue: " + Greatest_Decrease_date + "")
 
 # creating a new file for our results
-new_PyBank = open("output.txt", "w")
+new_PyBank = open("Output/output1.txt", "w")
 
 # writing results
 

@@ -66,12 +66,7 @@ with open(csvpath, newline = '') as csvfile:
         # looping through states dictionary
         state.append(us_state_abbrev[row[4]])
 
-# tests
-# print(first_name[0])
-# print(last_name[0])
-# print(dob[0])
-# print(ssn[0])
-# print(state[0])
+
 
 # zipping data
 employees = zip(emp_id, first_name, last_name, dob, ssn, state)

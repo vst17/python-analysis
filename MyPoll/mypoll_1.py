@@ -56,7 +56,7 @@ print("Winner: " + winner)
 print("-------------------------------------")
 
 # creating new text file
-new_file = open("Output/results_1.txt", "w")
+new_file = open("Output/mypollresults1.txt", "w")
 
 # writing the new file
 new_file.write("Election Results \n")

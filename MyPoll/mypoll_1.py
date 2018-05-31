@@ -18,7 +18,7 @@ with open(csvpath, newline = "") as csvfile:
     csvreader = csv.reader(csvfile, delimiter = ",")
     next(csvreader,None)
 
-    # total vote count; finding individual vote counts
+    # total votes count, finding individual vote counts
     for row in csvreader:
         total_votes +=1
         if row[2] in candidates.keys():

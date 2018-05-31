@@ -3,11 +3,11 @@ import os
 import csv
 
 # setting the path
-csvpath = os.path.join('Resources', 'employee_data1.csv')
+PyBosspath = os.path.join('Resources', 'employee_data1.csv')
 
 
 # tracking variables
-emp_id = []
+employee_id = []
 first_name = []
 last_name = []
 dob = []
@@ -29,37 +29,35 @@ us_state_abbrev = {
 }
 
 # reading the file in
-with open(csvpath, newline = '') as csvfile:
+with open(PyBosspath, newline = '') as csvfile:
     csvreader = csv.reader(csvfile, delimiter = ',')
     next(csvreader, None)
 
     # looping through the read file
     for row in csvreader:
         # appending employee id to a new list
-        emp_id.append(row[0])
+        employee_id.append(row[0])
 
         # appending first & last name to two separate lists
         # splitting name by space
-        # appending first name
-        # appending last name    
         name = row[1].split(" ") 
+        # appending first name and appending last name    
         first_name.append(name[0]) 
         last_name.append(name[1]) 
 
         # formatting & appending dob mm/dd/yyyy
         # splitting dob by '-'
-        # formatting dob
-        # appending formatted dob
-        # appending formatted dob
         bdate = row[2].split("-") 
-        new_db = bdate[1] + "/" + bdate[2] + "/" + bdate[0] 
+        # formatting dob
+        new_db = bdate[1] + "/" + bdate[2] + "/" + bdate[0]
+        # appending formatted dob
         dob.append(new_db) 
 
         #formatting & appending ssn
         # splitting ssn by '-'
+        ssn_split = row[3].split("-") 
         # formatting ssn
         # appending formatted ssn
-        ssn_split = row[3].split("-") 
         new_ssn = "***-**-" +ssn_split[2]
         ssn.append(new_ssn) 
 
@@ -69,13 +67,13 @@ with open(csvpath, newline = '') as csvfile:
 
 
 # zipping data
-employees = zip(emp_id, first_name, last_name, dob, ssn, state)
+employees = zip(employee_id, first_name, last_name, dob, ssn, state)
 
 # creting the new csv file
-output_file = os.path.join('Output/employee_data_clean_1.csv')
+output_boss = os.path.join('Output/employee_data_clean_1.csv')
 
 # opening & writing the file
-with open(output_file, 'w', newline = '') as csvfile:
+with open(output_boss, 'w', newline = '') as csvfile:
     writer = csv.writer(csvfile, delimiter = ',')
 
     # writing in headers

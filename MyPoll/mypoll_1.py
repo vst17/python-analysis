@@ -36,14 +36,6 @@ for key in candidates.keys():
         winner = key
         winner_count = candidates[key]
 
-# tests
-#print(total_votes)
-# tests
-# print(total_vote_count)
-# print(candidates)
-# print(candidates_percent)
-# print(winner)
-
 # printing to the terminal
 print("Election Results")
 print("-------------------------------------")
